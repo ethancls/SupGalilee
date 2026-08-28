@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ws.ethancls.com/schemas/languages.json",
+  "title": "Multilingual Portfolio Language Schema",
+  "description": "Schema for multilingual portfolio language configuration files",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this JSON Schema"
+    }
+  },
+  "patternProperties": {
+    "^[a-z]{2}(-[A-Z]{2})?$": {
+      "type": "object",
+      "description": "Language configuration object using ISO 639-1 (and optionally ISO 3166-1) language codes",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Native name of the language",
+          "minLength": 1
+        },
+        "flag": {
+          "type": "string",
+          "description": "Flag emoji representing the language/country"
+        },
+        "code": {
+          "type": "string",
+          "description": "ISO 639-1 language code",
+          "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+        },
+        "dir": {
+          "type": "string",
+          "description": "Text direction (left-to-right or right-to-left)",
+          "enum": ["ltr", "rtl"]
+        },
+        "navigation": {
+          "type": "object",
+          "description": "Navigation menu translations",
+          "properties": {
+            "home": { "type": "string", "minLength": 1 },
+            "projects": { "type": "string", "minLength": 1 },
+            "contact": { "type": "string", "minLength": 1 },
+            "education": { "type": "string", "minLength": 1 },
+            "experiences": { "type": "string", "minLength": 1 }
+          },
+          "required": ["home", "projects", "contact", "education", "experiences"],
+          "additionalProperties": false
+        },
+        "job": {
+          "type": "string",
+          "description": "Job title translation",
+          "minLength": 1
+        },
+        "home": {
+          "type": "object",
+          "description": "Home page content translations",
+          "properties": {
+            "title": { "type": "string", "minLength": 1 },
+            "subtitle": { "type": "string", "minLength": 1 },
+            "about_title": { "type": "string", "minLength": 1 },
+            "about_content": { "type": "string", "minLength": 1 },
+            "video_title": { "type": "string", "minLength": 1 },
+            "video_description": { "type": "string", "minLength": 1 }
+          },
+          "required": ["title", "subtitle", "about_title", "about_content", "video_title", "video_description"],
+          "additionalProperties": false
+        },
+        "projects": {
+          "type": "object",
+          "description": "Projects page content translations",
+          "properties": {
+            "title": { "type": "string", "minLength": 1 },
+            "subtitle": { "type": "string", "minLength": 1 },
+            "fs0ciety": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string", "minLength": 1 },
+                "description": { "type": "string", "minLength": 1 }
+              },
+              "required": ["title", "description"],
+              "additionalProperties": false
+            },
+            "atlas": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string", "minLength": 1 },
+                "description": { "type": "string", "minLength": 1 }
+              },
+              "required": ["title", "description"],
+              "additionalProperties": false
+            },
+            "jarvys": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string", "minLength": 1 },
+                "description": { "type": "string", "minLength": 1 }
+              },
+              "required": ["title", "description"],
+              "additionalProperties": false
+            },
+            "portfolio": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string", "minLength": 1 },
+                "description": { "type": "string", "minLength": 1 }
+              },
+              "required": ["title", "description"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["title", "subtitle", "fs0ciety", "atlas", "jarvys", "portfolio"],
+          "additionalProperties": false
+        },
+        "contact": {
+          "type": "object",
+          "description": "Contact page content translations",
+          "properties": {
+            "title": { "type": "string", "minLength": 1 },
+            "subtitle": { "type": "string", "minLength": 1 },
+            "email": { "type": "string", "minLength": 1 },
+            "github": { "type": "string", "minLength": 1 },
+            "linkedin": { "type": "string", "minLength": 1 },
+            "twitter": { "type": "string", "minLength": 1 },
+            "instagram": { "type": "string", "minLength": 1 },
+            "discord": { "type": "string", "minLength": 1 },
+            "cta_title": { "type": "string", "minLength": 1 },
+            "cta_description": { "type": "string", "minLength": 1 },
+            "send_email": { "type": "string", "minLength": 1 }
+          },
+          "required": ["title", "subtitle", "email", "github", "linkedin", "twitter", "instagram", "discord", "cta_title", "cta_description", "send_email"],
+          "additionalProperties": false
+        },
+        "footer": {
+          "type": "object",
+          "description": "Footer content translations",
+          "properties": {
+            "copyright": { "type": "string", "minLength": 1 }
+          },
+          "required": ["copyright"],
+          "additionalProperties": false
+        },
+        "experiences": {
+          "type": "array",
+          "description": "Work experiences list",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": { "type": "string", "minLength": 1 },
+              "title": { "type": "string", "minLength": 1 },
+              "company": { "type": "string", "minLength": 1 },
+              "details": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 },
+                "minItems": 1
+              }
+            },
+            "required": ["date", "title", "company", "details"],
+            "additionalProperties": false
+          }
+        },
+        "education": {
+          "type": "array",
+          "description": "Educational background list",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": { "type": "string", "minLength": 1 },
+              "title": { "type": "string", "minLength": 1 },
+              "school": { "type": "string", "minLength": 1 },
+              "desc": { "type": "string", "minLength": 1 }
+            },
+            "required": ["date", "title", "school", "desc"],
+            "additionalProperties": false
+          }
+        },
+        "skills": {
+          "type": "array",
+          "description": "Technical skills categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "cat": { "type": "string", "minLength": 1 },
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "required": ["cat", "items"],
+            "additionalProperties": false
+          }
+        },
+        "languageskills": {
+          "type": "array",
+          "description": "Language proficiency levels",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lang": { "type": "string", "minLength": 1 },
+              "level": { "type": "string", "minLength": 1 }
+            },
+            "required": ["lang", "level"],
+            "additionalProperties": false
+          }
+        },
+        "interests": {
+          "type": "array",
+          "description": "Personal interests and hobbies",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "qualities": {
+          "type": "array",
+          "description": "Personal qualities and soft skills",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "subtitles": {
+          "type": "array",
+          "description": "Section subtitles",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "required": [
+        "name", "flag", "code", "dir", "navigation", "job", "home", 
+        "projects", "contact", "footer", "experiences", "education", 
+        "skills", "languageskills", "interests", "qualities"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "minProperties": 1,
+  "additionalProperties": false
+}

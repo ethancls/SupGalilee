@@ -1,0 +1,112 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - link "HAZOP Labs HAZOP Labs" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "HAZOP Labs" [ref=e6]
+          - generic [ref=e7]:
+            - generic [ref=e8]: HAZOP
+            - generic [ref=e9]: Labs
+        - button [ref=e10] [cursor=pointer]:
+          - img
+      - button "Select Organization No organization" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]:
+          - img [ref=e15]
+          - generic [ref=e19]:
+            - paragraph [ref=e20]: Select Organization
+            - paragraph [ref=e21]: No organization
+        - img [ref=e22]
+      - navigation [ref=e28]:
+        - generic [ref=e29]:
+          - img [ref=e30]
+          - paragraph [ref=e34]: Select or create an organization to get started
+        - link "Documentation" [ref=e36] [cursor=pointer]:
+          - /url: /docs
+          - img [ref=e37]
+          - generic [ref=e39]: Documentation
+      - generic [ref=e41]:
+        - button "F Flow Test User flow-test-1770074164929@hazop-test.com" [ref=e42] [cursor=pointer]:
+          - generic [ref=e44]: F
+          - generic [ref=e45]:
+            - paragraph [ref=e46]: Flow Test User
+            - paragraph [ref=e47]: flow-test-1770074164929@hazop-test.com
+          - img [ref=e48]
+        - generic [ref=e50]:
+          - generic [ref=e53]: v0.1.0
+          - button [ref=e54] [cursor=pointer]:
+            - img
+    - main [ref=e55]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - heading "Flow Test Org 1770074165806" [level=1] [ref=e61]
+              - generic [ref=e62]: owner
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - img [ref=e65]
+                - text: 1 members
+              - generic [ref=e70]:
+                - img [ref=e71]
+                - text: 0 projects
+          - link "New Project" [ref=e73] [cursor=pointer]:
+            - /url: /org/flow-test-org-1770074165806/projects/new
+            - img
+            - text: New Project
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - generic [ref=e76]:
+              - generic [ref=e77]: Total Projects
+              - img [ref=e78]
+            - generic [ref=e81]: "0"
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: Study Nodes
+              - img [ref=e85]
+            - generic [ref=e90]: "0"
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - generic [ref=e93]: Deviations
+              - img [ref=e94]
+            - generic [ref=e97]: "0"
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e100]: Open Issues
+              - img [ref=e101]
+            - generic [ref=e105]: "0"
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]: HAZOP Projects
+            - generic [ref=e109]: Process safety studies in this organization
+          - generic [ref=e111]:
+            - img [ref=e112]
+            - heading "No projects yet" [level=3] [ref=e114]
+            - paragraph [ref=e115]: Create your first HAZOP study to get started
+            - link "Create Project" [ref=e116] [cursor=pointer]:
+              - /url: /org/flow-test-org-1770074165806/projects/new
+              - img
+              - text: Create Project
+        - generic [ref=e117]:
+          - link "Manage Members Invite team members and manage roles" [ref=e119] [cursor=pointer]:
+            - /url: /org/flow-test-org-1770074165806/members
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - img [ref=e122]
+                - text: Manage Members
+              - generic [ref=e127]: Invite team members and manage roles
+          - link "Organization Settings Configure organization preferences" [ref=e129] [cursor=pointer]:
+            - /url: /org/flow-test-org-1770074165806/settings
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - img [ref=e132]
+                - text: Organization Settings
+              - generic [ref=e134]: Configure organization preferences
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e140] [cursor=pointer]:
+    - img [ref=e141]
+  - alert [ref=e144]
+```

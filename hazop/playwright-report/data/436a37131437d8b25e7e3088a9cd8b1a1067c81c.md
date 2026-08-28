@@ -1,0 +1,83 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "HAZOP Labs HAZOP Labs" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "HAZOP Labs" [ref=e6]
+          - generic [ref=e7]: HAZOP
+          - generic [ref=e8]: Labs
+        - button "Toggle theme" [ref=e9] [cursor=pointer]:
+          - img
+          - generic [ref=e10]: Toggle theme
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - heading "Create an account" [level=1] [ref=e15]
+          - paragraph [ref=e16]: Enter your information to get started
+        - generic [ref=e17]: An account with this email already exists
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20]: Full Name
+            - textbox "Full Name" [ref=e21]:
+              - /placeholder: John Doe
+              - text: Login Test User
+          - generic [ref=e22]:
+            - generic [ref=e23]: Email
+            - textbox "Email" [ref=e24]:
+              - /placeholder: you@example.com
+              - text: login-test@hazop-test.com
+          - generic [ref=e25]:
+            - generic [ref=e26]: Password
+            - generic [ref=e27]:
+              - textbox "Password" [ref=e28]:
+                - /placeholder: ••••••••
+                - text: LoginTest123!
+              - button [ref=e29]:
+                - img [ref=e30] [cursor=pointer]
+            - generic [ref=e33]:
+              - generic [ref=e34]:
+                - img [ref=e35]
+                - text: 8+ characters
+              - generic [ref=e37]:
+                - img [ref=e38]
+                - text: Uppercase
+              - generic [ref=e40]:
+                - img [ref=e41]
+                - text: Lowercase
+              - generic [ref=e43]:
+                - img [ref=e44]
+                - text: Number
+              - generic [ref=e46]:
+                - img [ref=e47]
+                - text: Special char
+          - generic [ref=e49]:
+            - generic [ref=e50]: Confirm Password
+            - generic [ref=e51]:
+              - textbox "Confirm Password" [ref=e52]:
+                - /placeholder: ••••••••
+                - text: LoginTest123!
+              - button [ref=e53]:
+                - img [ref=e54] [cursor=pointer]
+          - button "Create account" [ref=e57] [cursor=pointer]
+        - generic [ref=e58]:
+          - text: Already have an account?
+          - link "Sign in" [ref=e59] [cursor=pointer]:
+            - /url: /login
+    - generic [ref=e61]:
+      - img "Industrial refinery" [ref=e62]
+      - generic [ref=e64]:
+        - heading "Join HAZOP Labs" [level=2] [ref=e65]
+        - paragraph [ref=e66]: Start conducting professional HAZOP studies today. Collaborate with your team and ensure process safety compliance.
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e72] [cursor=pointer]:
+    - generic [ref=e75]:
+      - text: Compiling
+      - generic [ref=e76]:
+        - generic [ref=e77]: .
+        - generic [ref=e78]: .
+        - generic [ref=e79]: .
+  - alert [ref=e80]
+```

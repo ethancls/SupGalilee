@@ -1,0 +1,10 @@
+# Ignore files for Vercel deployment
+node_modules
+.git
+.gitignore
+README.md
+test.sh
+validation.html
+*.log
+.DS_Store
+.env.local

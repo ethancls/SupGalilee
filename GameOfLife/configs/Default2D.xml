@@ -1,0 +1,11 @@
+<GameOfLife>
+    <Dimension>2</Dimension>
+    <GridSize>
+        <Size>50</Size>
+        <Size>50</Size>
+    </GridSize>
+    <EvolutionRule>SI(EQ(COMPTER(G0),1), SI(OU(EQ(COMPTER(G8*),2),EQ(COMPTER(G8*),3)),1,0),SI(EQ(COMPTER(G8*),3),1,0))</EvolutionRule>
+    <InitialCells>
+        <Random>15</Random>
+    </InitialCells>
+</GameOfLife>

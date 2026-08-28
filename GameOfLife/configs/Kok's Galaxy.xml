@@ -1,0 +1,66 @@
+<GameOfLife>
+    <Dimension>2</Dimension>
+    <GridSize>
+        <Size>31</Size>
+        <Size>31</Size>
+    </GridSize>
+    <EvolutionRule>SI(EQ(COMPTER(G0),1), SI(OU(EQ(COMPTER(G8*),2),EQ(COMPTER(G8*),3)),1,0) , SI(EQ(COMPTER(G8*),3),1,0))</EvolutionRule>
+    <InitialCells>
+        <!-- Bar 1 -->
+        <Cell>18,11</Cell>
+        <Cell>18,12</Cell>
+        <Cell>18,13</Cell>
+        <Cell>18,14</Cell>
+        <Cell>18,15</Cell>
+        <Cell>18,16</Cell>
+        <Cell>19,11</Cell>
+        <Cell>19,12</Cell>
+        <Cell>19,13</Cell>
+        <Cell>19,14</Cell>
+        <Cell>19,15</Cell>
+        <Cell>19,16</Cell>
+
+        <!-- Bar 2 -->
+        <Cell>12,14</Cell>
+        <Cell>12,15</Cell>
+        <Cell>12,16</Cell>
+        <Cell>12,17</Cell>
+        <Cell>12,18</Cell>
+        <Cell>12,19</Cell>
+        <Cell>11,14</Cell>
+        <Cell>11,15</Cell>
+        <Cell>11,16</Cell>
+        <Cell>11,17</Cell>
+        <Cell>11,18</Cell>
+        <Cell>11,19</Cell>
+
+        <!-- Bar 3 -->
+        <Cell>14,18</Cell>
+        <Cell>15,18</Cell>
+        <Cell>16,18</Cell>
+        <Cell>17,18</Cell>
+        <Cell>18,18</Cell>
+        <Cell>19,18</Cell>
+        <Cell>14,19</Cell>
+        <Cell>15,19</Cell>
+        <Cell>16,19</Cell>
+        <Cell>17,19</Cell>
+        <Cell>18,19</Cell>
+        <Cell>19,19</Cell>
+
+        <!-- Bar 3 -->
+        <Cell>11,11</Cell>
+        <Cell>12,11</Cell>
+        <Cell>13,11</Cell>
+        <Cell>14,11</Cell>
+        <Cell>15,11</Cell>
+        <Cell>16,11</Cell>
+        <Cell>11,12</Cell>
+        <Cell>12,12</Cell>
+        <Cell>13,12</Cell>
+        <Cell>14,12</Cell>
+        <Cell>15,12</Cell>
+        <Cell>16,12</Cell>
+        
+    </InitialCells>
+</GameOfLife>

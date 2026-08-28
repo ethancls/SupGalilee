@@ -1,0 +1,37 @@
+
+# System Architecture
+
+The HAZOP Labs system is designed with a modern, scalable architecture to support the full HAZOP workflow.
+
+## Core Modules
+
+### 1. Process Definition
+- **Process Description**: Text-based input or file upload (PFD/P&ID).
+- **Node Management**: Canvas-based or list-based definition of study nodes.
+- **Connection Mapping**: Linking nodes to represent process flow.
+
+### 2. Analysis Engine
+- **Deviation Generator**: Combines Parameters + Guide Words to create deviation scenarios.
+- **AI Integration**: Connects to LLMs (OpenAI, Claude, etc.) to suggest causes, consequences, and safeguards.
+- **Worksheet Interface**: Tabular view for entering and reviewing HAZOP data.
+
+### 3. Risk & Action Management
+- **Risk Matrix**: Configurable matrix (typically 5x5) for risk assessment.
+- **Action Tracking**: Database of recommendations with status, assignee, and due dates.
+
+## Data Structure
+
+The system uses a relational database (SQLite/PostgreSQL) with the following key entities:
+
+- **Organization**: Top-level tenant.
+- **Project**: A specific HAZOP study.
+- **Node**: A study section within a project.
+- **Deviation**: A specific scenario (Parameter + Guide Word).
+- **Risk Assessment**: Severity and Likelihood scores.
+
+## Technology Stack
+
+- **Frontend**: Next.js (React), Tailwind CSS, Lucide Icons.
+- **Backend**: Next.js API Routes, Prisma ORM.
+- **Database**: SQLite (Development), PostgreSQL (Production).
+- **AI**: Integration with major LLM providers via standard APIs.

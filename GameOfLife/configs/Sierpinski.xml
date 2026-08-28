@@ -1,0 +1,10 @@
+<GameOfLife>
+    <Dimension>1</Dimension>
+    <GridSize>
+        <Size>400</Size>
+    </GridSize>
+    <EvolutionRule>SI(EQ(COMPTER(G2),1), SI(EQ(COMPTER(G0),0), 1, 0), 0)</EvolutionRule>
+    <InitialCells>
+        <Cell>200</Cell>
+    </InitialCells>
+</GameOfLife>

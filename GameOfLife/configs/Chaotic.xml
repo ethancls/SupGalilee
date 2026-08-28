@@ -1,0 +1,17 @@
+<GameOfLife>
+    <Dimension>1</Dimension>
+    <GridSize>
+        <Size>1000</Size>
+    </GridSize>
+    <CustomNeighborhoods>
+        <Neighborhood>G01 = ((-2))</Neighborhood>
+        <Neighborhood>G02 = ((-1))</Neighborhood>
+        <Neighborhood>G03 = ((1))</Neighborhood>
+        <Neighborhood>G04 = ((2))</Neighborhood>
+        <Neighborhood>G00 = ((-2),(-1),(1),(2))</Neighborhood>
+    </CustomNeighborhoods>
+    <EvolutionRule>))</EvolutionRule>
+    <InitialCells>
+        <Cell>500</Cell>
+    </InitialCells>
+</GameOfLife>

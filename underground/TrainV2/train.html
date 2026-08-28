@@ -1,0 +1,52 @@
+<!--
+	Simulateur de trains
+	* Auteurs                       : Ethan Nicolas && Homsi Rami
+ 	* Création                      : 2023/12/11
+ 	* Dernière modification         : 2024/06/11
+-->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Simulateur de trains</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/train.css">
+	</head>
+
+	<body>
+
+		<div id="controls">
+			<input type="text" id="nom_carte">
+			<button id="sauvegarder_carte">Sauvegarder</button>
+			<h1>Simulateur de trains</h1>
+			<select id="liste_cartes"></select>
+			<button id="charger_carte">Charger</button>
+		</div>
+
+		<canvas id="simulateur" width="1575" height="800">
+			Simulateur ferroviaire (votre navigateur ne prend pas en charge canvas)
+		</canvas>
+
+		<div id="boutons">
+			<input type="image" id="bouton_foret" alt="Forêt" src="images/foret.jpg" >
+			<input type="image" id="bouton_eau" alt="Eau" src="images/eau.jpg" >
+			<input type="image" id="bouton_rail_horizontal" alt="Rail horizontal" src="images/rail-horizontal.png" >
+			<input type="image" id="bouton_rail_vertical" alt="Rail vertical" src="images/rail-vertical.png" >
+			<input type="image" id="bouton_rail_droite_vers_haut" alt="Rail allant de droite vers le haut" src="images/rail-droite-vers-haut.png" >
+			<input type="image" id="bouton_rail_haut_vers_droite" alt="Rail allant du haut vers la droite" src="images/rail-haut-vers-droite.png" >
+			<input type="image" id="bouton_rail_droite_vers_bas" alt="Rail allant de la droite vers le bas" src="images/rail-droite-vers-bas.png" >
+			<input type="image" id="bouton_rail_bas_vers_droite" alt="Rail allant du bas vers la droite" src="images/rail-bas-vers-droite.png" >
+
+			<input type="image" id="bouton_train_1" alt="Locomotive seule" src="images/locomotive.png" >
+			<input type="image" id="bouton_train_2" alt="Locomotive et 1 wagon" src="images/loco-1-wagon.png" >
+			<input type="image" id="bouton_train_4" alt="Locomotive et 3 wagons" src="images/loco-3-wagons.png" >
+			<input type="image" id="bouton_train_6" alt="Locomotive et 5 wagons" src="images/loco-5-wagons.png" >
+			<input type="image" id="bouton_bateau" alt="Bateau" src="images/bateau.png" >
+			<input type="image" id="bouton_avion" alt="Avion" src="images/avion.png" >
+			<input type="image" id="bouton_undertale" alt="Undertale" src="images/undertale.png" >
+
+			<input type="button" id="bouton_pause" value="Pause">
+		</div>
+		<script src="js/train.js"></script>
+	</body>
+</html>

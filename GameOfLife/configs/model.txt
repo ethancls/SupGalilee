@@ -1,0 +1,18 @@
+<GameOfLife>
+    <Dimension>2</Dimension>
+    <GridSize>
+        <Size>11</Size>
+        <Size>11</Size>
+    </GridSize>
+    <Cut>axis(x y z ...) value</Cut>
+    <CustomNeighborhoods>
+        <Neighborhood>GXX = ((a, b, ...), (c, d, ...), ...)</Neighborhood>
+    </CustomNeighborhoods>
+    <EvolutionRule>SI(EQ(COMPTER(G0),1), SI(OU(EQ(COMPTER(G8*),2),EQ(COMPTER(G8*),3)),1,0) , SI(EQ(COMPTER(G8*),3),1,0))</EvolutionRule> # Regle 2D de Conway
+    <EvolutionRule>SI(EQ(COMPTER(G0),1), SI(OU(EQ(COMPTER(G26*),5),EQ(COMPTER(G26*),6)),1,0) , SI(EQ(COMPTER(G26*),4),1,0))</EvolutionRule> # Regle 3D (https://chrisevans9629.github.io/blog/2020/07/27/game-of-life)
+    <InitialCells>
+        <Cell>x , y , z ...</Cell>
+        OR
+        <Random>k</Random>
+    </InitialCells>
+</GameOfLife>

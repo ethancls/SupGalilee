@@ -1,0 +1,51 @@
+FROM node:22-alpine AS base
+
+# Installation des dépendances système nécessaires
+RUN apk add --no-cache libc6-compat git
+
+# Configuration du répertoire de travail
+WORKDIR /app
+
+# Copie des fichiers de configuration du package manager
+COPY package.json package-lock.json* ./
+
+# Installation des dépendances
+FROM base AS deps
+RUN npm ci
+
+# Build de l'application
+FROM base AS builder
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+# Build Next.js with environment validation skipped for Docker builds
+ENV SKIP_ENV_VALIDATION=true
+RUN npm run build
+
+# Production
+FROM base AS runner
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Création d'un utilisateur non-root
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copie des fichiers nécessaires
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
+# Exposition du port
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+# Scripts disponibles pour les migrations
+# docker exec -it container npm run db:push
+# docker exec -it container npm run db:studio
+
+CMD ["node", "server.js"]

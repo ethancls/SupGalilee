@@ -1,0 +1,24 @@
+<GameOfLife>
+    <Dimension>3</Dimension>
+    <GridSize>
+        <Size>11</Size>
+        <Size>11</Size>
+        <Size>11</Size>
+    </GridSize>
+    <Cut>z 5</Cut>
+    <EvolutionRule>SI(EQ(COMPTER(G0),1), SI(OU(EQ(COMPTER(G26*),5),EQ(COMPTER(G26*),6)),1,0) , SI(EQ(COMPTER(G26*),4),1,0))</EvolutionRule>
+    <InitialCells>
+        <Cell>6, 7, 5</Cell>
+        <Cell>5, 7, 5</Cell>
+        <Cell>4, 7, 5</Cell>
+        <Cell>6, 3, 5</Cell>
+        <Cell>5, 3, 5</Cell>
+        <Cell>4, 3, 5</Cell>
+        <Cell>7, 6, 5</Cell>
+        <Cell>7, 5, 5</Cell>
+        <Cell>7, 4, 5</Cell>
+        <Cell>3, 6, 5</Cell>
+        <Cell>3, 5, 5</Cell>
+        <Cell>3, 4, 5</Cell>
+    </InitialCells>
+</GameOfLife>

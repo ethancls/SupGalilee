@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /api/config/
+Disallow: /schemas/
+Disallow: /*.php$
+Disallow: /api/*.php$
+
+Allow: /
+Allow: /api/index.php
+Allow: /?page=*
+Allow: /?lang=*
+
+Sitemap: https://ws.ethancls.com/sitemap.xml

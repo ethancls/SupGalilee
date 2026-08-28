@@ -1,0 +1,69 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.3"
+    }
+  },
+  "routes": [
+    {
+      "src": "/robots.txt",
+      "dest": "/public/robots.txt"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/public/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml; charset=utf-8",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/schemas/languages.json",
+      "dest": "/api/schema-languages.php"
+    },
+    {
+      "src": "/style.css",
+      "dest": "/api/css.php"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "https://portfolio.ethancls.com/favicon.ico"
+    },
+    {
+      "src": "/background.jpeg",
+      "dest": "/api/background-image.php"
+    },
+    {
+      "src": "/fs0ciety.png",
+      "dest": "/api/fs0ciety-image.php"
+    },
+    {
+      "src": "/atlas.png",
+      "dest": "/api/atlas-image.php"
+    },
+    {
+      "src": "/jarvys.png",
+      "dest": "/api/jarvys-image.php"
+    },
+    {
+      "src": "/portfolio.png",
+      "dest": "/api/portfolio-image.php"
+    },
+    {
+      "src": "/api/og-image.php",
+      "dest": "/api/og-image.php"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
+    }
+  ]
+}
